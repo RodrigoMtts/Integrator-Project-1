@@ -1,0 +1,29 @@
+@model List<Usuario>;
+<partial name="_menuAdminPartial">
+<div class="tabela">                    
+    <table id="customers">
+        <tr>
+            <th>ID Cliente</th>
+            <th>Nome do CLiente</th>
+            <th>Nome de Usuário</th>
+            <th>CPF</th>
+            <th>Ultimo Acesso</th>
+            <th>Ultima Compra</th>
+            <th>Detalhes</th>
+            <th>Excluir</th>
+        </tr>
+        @foreach (var u in Model)
+        {
+        <tr>
+            <td>@u.id</td>
+            <td>@u.nome</td>
+            <td>@u.nomeUsuario</td>
+            <td>@u.cpf</td>
+            <td>@u.criacaoConta</td>
+            <td>@u.ultimoAcesso</td>
+            <td><a href="/Usuario/Detalhes/@u.id">Detalhes</a></td>
+            <td><a href="/Usuario/ExcluirUsuario/@u.id">Excluir</a></td>
+        </tr>
+        }
+    </table>
+</div>

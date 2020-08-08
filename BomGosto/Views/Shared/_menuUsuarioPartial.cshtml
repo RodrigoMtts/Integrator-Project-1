@@ -1,0 +1,22 @@
+<aside class="filtro">
+    <div class="menu">
+        <div>
+            <h2>Sabores</h2>
+            <ul>
+                 <li>
+                    <a href="/Home/Index">Todos</a>
+                </li>
+                @{
+                    foreach (var item in ViewBag.produtos)
+                    {                        
+                        <li>
+                            <a href="/Home/Index/@item.saborPrincipal">@item.saborPrincipal</a>
+                        </li>
+                    }
+                }                
+            </ul>
+        </div>
+    </div>
+</aside>
+<main class="principal">
+    <div class="conteudo-principal">

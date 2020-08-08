@@ -1,0 +1,30 @@
+.principal {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    padding: 0 200px;
+}
+
+.nossa-historia h2 {
+    font-weight: bold;
+}
+
+.nossa-historia p {
+    margin: 10px 0;
+}
+
+.nossa-historia img {
+    background-color: #f5f6ea;
+    border: 10px solid #f5f6ea;
+    border-radius: 15px 0 15px 0;
+    width: 300px;
+}
+
+.nossa-historia figure {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+.nossa-historia figcaption {
+    font-size: 14px;
+    text-align: center;
+}

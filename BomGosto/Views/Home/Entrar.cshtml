@@ -1,0 +1,19 @@
+ @{
+     ViewBag.css = "/css/Contato.css";
+ }
+ <partial name="_menuSimplesPartial">
+ <div class="contato-flex">
+    <div class="form-padrao">
+        <form asp-action="Entrar" asp-controller="Usuario">
+            <label for="nomeUsuario">Usuário</label>
+            <input name="nomeUsuario" size="30" placeholder="Usuario">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha"size="30" placeholder="Senha">
+            <input type="submit" value="Cadastrar-se">
+        </form>
+    </div>
+    <div class="contato-info">
+        <h2></h2>
+        <p></p>
+    </div>
+</div>

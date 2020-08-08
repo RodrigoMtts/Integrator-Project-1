@@ -1,0 +1,27 @@
+.menu {
+    width: 150px;
+    display: flex;
+    padding: 20px 10px 20px 20px;
+    margin: 40px auto;
+    background-color: #f5e4cb;
+    border-radius: 15px;
+}
+
+.menu h2 {
+    font-weight: bolder;
+    margin: 0 0 10px 0;
+    color: #da1536;
+}
+
+.menu li {
+    margin: 7px 0 4px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #62332c;
+}
+
+.menu a:hover {
+    color: #b93a56;
+}

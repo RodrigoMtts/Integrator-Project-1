@@ -1,0 +1,40 @@
+.navegacao-flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.navegacao-flex-start {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navegacao-flex-end {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #da1536;
+    padding: 1px 15px;
+    border: 1px solid #da1536;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.navegacao a:last-child {
+    margin: 0;
+    border: none;
+}
+
+
+/*Eventos*/
+
+.navegacao a:hover {
+    color: #62312a;
+}

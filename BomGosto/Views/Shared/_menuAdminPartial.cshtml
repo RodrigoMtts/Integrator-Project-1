@@ -1,0 +1,74 @@
+ @using Microsoft.AspNetCore.Http;
+
+ <aside class="filtro">
+    <div class="menu">
+        <div>
+            <h2>Menu</h2>
+        @{
+            if(Context.Session.GetInt32("tipoUsuario") == 0){        
+            <ul>
+                <li>
+                    <a href="/Usuario/Detalhes">Meus dados</a></li>
+                <li>
+                    <a asp-action="AlterarSenha" asp-controller="Usuario">Alterar senha</a></li>
+                <li>
+                    <a asp-action="ListaPedidos" asp-controller="Pedido">Compras</a>
+                </li>
+                <li>
+                    <a asp-action="ListaProdutos" asp-controller="Produto">Produtos</a>
+                </li>
+                <li>
+                    <a asp-action="CadastraProduto" asp-controller="Produto">Cadastrar produto</a>
+                </li>
+                <li>
+                    <a asp-action="ListaUsuarios" asp-controller="Usuario">Usuários</a>
+                </li>
+                <li>
+                    <a asp-action="ListaColaborador" asp-controller="Usuario">Colaboradores</a>
+                </li>
+                <li>
+                    <a asp-action="CadastraColaborador" asp-controller="Usuario">Cadastrar Colaborador</a>
+                </li>
+                <li>
+                    <a asp-action="ListaContato" asp-controller="Home">Mensagens</a>
+                </li>
+            </ul>
+            }else if(Context.Session.GetInt32("tipoUsuario") == 1){       
+            <ul>
+                <li>
+                    <a href="/Usuario/Detalhes">Meus dados</a></li>
+                <li>
+                    <a asp-action="AlterarSenha" asp-controller="Usuario">Alterar senha</a></li>
+                <li>
+                    <a asp-action="ListaPedidos" asp-controller="Pedido">Compras</a>
+                </li>
+                <li>
+                    <a asp-action="ListaProdutos" asp-controller="Produto">Produtos</a>
+                </li>
+                <li>
+                    <a asp-action="CadastraProduto" asp-controller="Produto">Adiciona Produto</a>
+                </li>
+                <li>
+                    <a asp-action="ListaContato" asp-controller="Home">Mensagens</a>
+                </li>
+            </ul> 
+            }else if(Context.Session.GetInt32("tipoUsuario") == 2){
+            <ul>
+                <li>
+                    <a asp-action="Detalhes" asp-controller="Usuario">Meus dados</a></li>
+                <li>
+                    <a asp-action="AlterarSenha" asp-controller="Usuario">Alterar senha</a>
+                </li>
+                <li>
+                    <a asp-action="ListaCarrinho" asp-controller="Carrinho">Carrinho</a>
+                </li>
+                <li>
+                    <a asp-action="ListaPedidos" asp-controller="Pedido">Minhas Compras</a>
+                </li>
+            </ul>
+            }
+        }
+    </div>
+</aside>
+<main class="principal">
+        <div class="conteudo-principal">

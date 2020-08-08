@@ -1,0 +1,79 @@
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/navegacao.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/lista-produto.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+    <link rel="stylesheet" href="/css/MeusDados.css">
+    <link rel="stylesheet" href="/css/tabela.css">
+    <link rel="stylesheet" href="@ViewBag.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>
+                <a href="/Home/Index"><img src="/img/logo.png" alt="Bom Gosto"></a>
+            </h1>
+        </header>
+        <nav class="navegacao">
+            <div class="navegacao-flex">
+                <div class="navegacao-flex-start">
+                    <a href="/Home/Index">Início</a>
+                    <a asp-action="Contato" asp-controller="Home">Contato</a>
+                    <a asp-action="SobreNos" asp-controller="Home">Sobre nós</a>
+                </div>
+                <div class="navegacao-flex-end">
+                    @if(Context.Session.GetInt32("id") != null){<a asp-action="Detalhes" asp-controller="Usuario">Menu do usuário</a>}
+                    @if(Context.Session.GetInt32("id") is null){<a asp-action="Cadastrarse" asp-controller="Home">Cadastrar-se</a>}
+                    @if(Context.Session.GetInt32("id") is null){<a asp-action="Entrar" asp-controller="Home">Entrar</a>}
+                    @if(Context.Session.GetInt32("id") != null){<a asp-action="Sair" asp-controller="Usuario">Sair</a>}
+                </div>
+            </div>
+        </nav>        
+                @RenderBody()
+            </div>
+        </main>
+        <footer class="rodape">
+            <div class="rodape-flex">
+                <div class="rodape-1">
+                    <ul>
+                        <li class="rodape-navegacao">NAVEGAÇÃO</li>
+                        <li><a href="/Home/Index">Início</a></li>
+                        <li><a asp-action="Contato" asp-controller="Home">Contato</a></li>
+                        <li><a asp-action="SobreNos" asp-controller="Home">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="rodape-1">
+                    <ul>
+                        <li class="rodape-navegacao">CONTATO</li>
+                        <li>Tel: (21) 96732-5421</li>
+                        <li>WhatSapp: (21) 95732-5232</li>
+                        <li>E-mail: jornilda@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="rodape-1">
+                    <ul>
+                        <li class="rodape-navegacao">ENDEREÇO</li>
+                        <li>Rio De Janeiro</li>
+                        <li>Duque de Caxias</li>
+                        <li>AV. Presidente kennedy - N° 433</li>
+                    </ul>
+                </div>
+                <div class="rodape-img">
+                    <a href="/Home/Index"><img src="/img/logo-inverso.png" alt="Bom Gosto"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

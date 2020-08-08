@@ -1,0 +1,17 @@
+@model List<Produto>;
+<partial name="_menuAdminPartial">
+<div class="tabela">                    
+    <table id="customers">
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.nome</td>
+            <td>R$@item.preco</td>
+        </tr>
+        }
+    </table>
+</div>

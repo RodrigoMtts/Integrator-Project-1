@@ -1,0 +1,31 @@
+@model Usuario
+
+<partial name="_menuAdminPartial">
+<div class="contato-flex">
+    <div class="form-padrao">
+        <form asp-action="Cadastrese" asp-controller="Usuario" enctype="multipart/form-data">
+            <input type="hidden" value="1" asp-for="tipoUsuario">
+            <label asp-for="nome">Nome</label>
+            <input asp-for="nome" size="30" placeholder="Seu nome...">
+            <label asp-for="nomeUsuario">Nome de Usuário</label>  
+            <input asp-for="nomeUsuario" size="30" placeholder="Seu nome de usuario...">
+            <label asp-for="senha">Senha</label>
+            <input asp-for="senha" size="30" placeholder="Digite sua senha">
+            <label asp-for="cpf">CPF</label>
+            <input asp-for="cpf" size="30" placeholder="xxx.xxx.xxx-xx">
+            <label asp-for="email">E-mail</label>
+            <input asp-for="email" size="30" placeholder="Exemplo">
+            <label asp-for="telefone">Telefone</label>
+            <input asp-for="telefone" size="30" placeholder="(xx) xxxxx-xxxx">
+            <label asp-for="cep">CEP</label>
+            <input asp-for="cep" size="30" placeholder="xxxxx-xxx">
+            <label asp-for="imagem">Foto de perfil</label>
+            <input type="file" asp-for="imagem" size="30" multiple>
+            <input type="submit" value="Cadastrar-se">
+        </form>
+    </div>
+    <div class="contato-info">
+        <h2></h2>
+        <p></p>
+    </div>
+</div>

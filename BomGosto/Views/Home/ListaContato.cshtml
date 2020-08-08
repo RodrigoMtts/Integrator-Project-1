@@ -1,0 +1,21 @@
+@model List<Usuario>;
+<partial name="_menuAdminPartial">
+<div class="tabela">                    
+    <table id="customers">
+        <tr>
+            <th>Nome</th>
+            <th>Ultimo Acesso</th>
+            <th>Mensagem</th>
+            <th>Excluir</th>
+        </tr>
+        @foreach (var u in Model)
+        {
+        <tr>
+            <td>@u.nome</td>
+            <td>@u.ultimoAcesso</td>
+            <td>@u.mensagem</td>
+            <td><a href="/Home/ExcluirContato/@u.id">Excluir</a></td>
+        </tr>
+        }
+    </table>
+</div>

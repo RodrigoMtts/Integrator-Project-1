@@ -1,0 +1,25 @@
+@using Microsoft.AspNetCore.Http;
+@model List<Produto>
+<partial name="_menuUsuarioPartial">
+<ul class="lista-produto">
+    @foreach(var item in Model)
+    {
+    <li>
+        <div class="parte1">
+            <img src="/img/produtos/@item.caminhoImagem" alt="BoloDeChocolate">
+            <h2 class="">@item.nome</h2>
+            <p>@item.descricao
+
+            </p>
+        </div>
+        <div class="parte2">
+            <p>
+                <span class="preco">Preço: </span> R$@item.preco
+            </p>
+            @if((Context.Session.GetInt32("tipoUsuario") == 2) || (Context.Session.GetInt32("tipoUsuario") is null)){
+                <a class="botao-adcionar-carrinho" href="/Carrinho/Adicionar/@item.id">Por no Carrinho</a>
+            }
+        </div>
+    </li>
+    }
+</ul>

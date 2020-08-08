@@ -1,0 +1,28 @@
+@model Usuario
+@{
+    ViewBag.css = "/css/Contato.css";
+}
+<partial name="_menuSimplesPartial">
+<div class="contato-flex">
+    <div class="form-padrao">
+        <form asp-action="Contato" asp-controller="Home">
+            <label asp-for="nome">Nome</label>
+            <input asp-for="nome" size="30" placeholder="Seu nome...">
+            <label asp-for="email">E-mail</label>
+            <input asp-for="email" size="30" placeholder="Exemplo@dominio.com">
+            <label asp-for="telefone">Telefone</label>
+            <input asp-for="telefone" size="30" placeholder="(xx) xxxxx-xxxx">
+            <label asp-for="mensagem">Mensagem</label>
+            <textarea asp-for="mensagem" cols="70" rows="15" placeholder="Sua mensagem..."></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="lista">
+        <h3>CONTATOS</h3>
+        <ul>
+            <li><strong>Tel:</strong> (21) 96732-5421</li>
+            <li><strong>WhatSapp:</strong> (21) 95732-5232</li>
+            <li><strong>E-mail:</strong> jornilda@gmail.com</li>
+        </ul>
+    </div>
+</div>

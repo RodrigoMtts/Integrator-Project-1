@@ -1,0 +1,29 @@
+@model List<Produto>;
+<partial name="_menuAdminPartial">
+<div class="tabela">                    
+    <table id="customers">
+        <tr>
+            <th>Nome</th>
+            <th>saborPrincipal</th>
+            <th>descricao</th>
+            <th>preco</th>
+            <th>dataCadastro</th>
+            <th>Cadastrado por</th>
+            <th>Alterar</th>
+            <th>Apagar</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.nome</td>
+            <td>@item.saborPrincipal</td>
+            <td>@item.descricao</td>
+            <td>R$@item.preco</td>
+            <td>@item.dataCadastro</td>
+            <td>@item.nomeUsuario</td>
+            <td><a href="/Produto/AlteraProduto/@item.id">Alterar</a></td>
+            <td><a href="/Produto/ExcluirProduto/@item.id">Excluir</a></td>
+        </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,148 @@
+.cabecalho {
+    background-image: url(../img/back1-repeat.jpg);
+    background-size: 300px;
+    background-position-y: 17px;
+    border: 15px solid;
+    border-image-source: url(../img/borda1-repeat.png);
+    border-image-repeat: unset;
+    border-image-slice: 60;
+}
+
+.navegacao {
+    background-color: #f5e4cb;
+}
+
+.filtro,
+.principal {
+    background-image: url(../img/back-main-repeat.jpg);
+    background-size: 240px;
+}
+
+.principal {
+    background-position-x: 40px;
+}
+
+.rodape {
+    background-color: #0b73ff;
+    border-image-source: url(../img/borde-bottom-repeat.png);
+    border-style: solid;
+    border-bottom: none;
+    border-width: 10px;
+    border-image-slice: 240;
+    border-image-repeat: round;
+}
+
+.flex-bt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 10px 0 20px;
+}
+
+
+/*BOTAO*/
+
+button {
+    width: 100%;
+    color: aliceblue;
+    font-weight: bold;
+    background-color: #da1536;
+    border: none;
+    height: 25px;
+}
+
+button a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #62332c;
+}
+
+
+/*LISTA*/
+
+.lista h3 {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: large;
+}
+
+.lista li {
+    margin: 0 0 5px 0;
+}
+
+.lista strong {
+    font-weight: bold;
+    color: #da1536;
+}
+
+
+/*FORMULÁRIo PADRÃO*/
+
+.form-padrao form input {
+    margin: 0 0 10px 0;
+    display: block;
+}
+
+.form-padrao label {
+    display: block;
+    margin: 0 0 3px 0;
+    font-weight: bold;
+}
+
+.form-padrao textarea {
+    display: block;
+}
+
+.form-padrao h2 {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.form-padrao li {
+    margin: 0 0 5px 0;
+}
+
+.form-padrao strong {
+    font-weight: bold;
+}
+
+.form-padrao input[type="submit"] {
+    background-color: #da1536;
+    border: none;
+    color: #f5e4cb;
+    width: 200px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.form-padrao input[type="submit"]:hover {
+    background-color: #62332c;
+}
+
+.form-padrao textarea {
+    margin-bottom: 10px;
+}
+
+
+/*Botoes e espaço finalizar compra*/
+
+.sp-bt {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bt-finalizar {
+    width: 200px;
+}
+
+.valor-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    color: black;
+    width: 300px;
+}

@@ -1,0 +1,38 @@
+@model Usuario
+<partial name="_menuAdminPartial">
+<div class="flex-meus-dados">
+    <div class="img-perfil">
+            <img src="/img/usuarios/@Model.caminhoImagem" alt="Imagem perfil">            
+            <button><a href="/Usuario/ExcluirImagem/@Model.id">Excluir Imagem</a></button>            
+        </div>
+    <div class="flex-bt">
+        
+        <div class="flex-bt-1">
+            <div class="dados-pessoais">
+                <h3>Dados Pessoais</h3>
+                <ul>
+                    <li><strong>Nome:</strong> @Model.nome</li>
+                    <li><strong>CPF:</strong> @Model.cpf</li>
+                    <li><strong>E-mail:</strong> @Model.email</li>
+                    <li><strong>Telefone:</strong> @Model.telefone</li>
+                    <li><strong>CEP:</strong> @Model.cep</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-bt-2">
+            <button><a href="/Usuario/AlterarDados/@Model.id">Alterar Dados</a></button>
+        </div>
+    </div>
+    <div class="lista flex-bt">
+        <div>
+            <h3>Informações da conta</h3>
+            <ul>
+                <li><strong>Criação da conta:</strong> @Model.criacaoConta</li>
+                <li><strong>Ultimo acesso:</strong> @Model.ultimoAcesso</li>
+            </ul>
+        </div>
+        <div>
+            <button><a href="/Usuario/ExcluirConta/@Model.id">Excluir Conta</a></button>
+        </div>
+    </div>
+</div>

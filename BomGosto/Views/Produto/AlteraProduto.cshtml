@@ -1,0 +1,24 @@
+@model Produto
+
+<partial name="_menuAdminPartial">
+<div class="contato-flex">
+    <div class="form-padrao">
+        <form asp-action="AlteraProduto" asp-controller="Produto" enctype="multipart/form-data">
+            <label asp-for="nome">Nome</label>
+            <input asp-for="nome" size="30" placeholder="Nome do produto...">
+            <label asp-for="saborPrincipal">Sabor principal</label>  
+            <input asp-for="saborPrincipal" size="30" placeholder="Digite o sabor principal...">                       
+            <label asp-for="preco">Preço</label>
+            <input asp-for="preco" size="30" placeholder="Digite o preço...">
+            <label asp-for="imagem">Imagem</label>
+            <input type="file" asp-for="imagem" size="30" multiple>
+            <label asp-for="descricao">Descricao</label>
+            <textarea asp-for="descricao" cols="60" rows="15" placeholder="Insira a descriçaõ do produto..."></textarea>
+            <input type="submit" value="Alterar Produto">
+        </form>
+    </div>
+    <div class="contato-info">
+        <h2></h2>
+        <p></p>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qMunUNvwptVUQBPLsBMsCz3vLom4zMqaUie6wc5W/DrxkDzXdQ7aE38f3gOIbP/ppA+svekXaeBTNv5zkQ2xHw==",
+  "success": true,
+  "projectFilePath": "/home/rodrigo/VisualCode/SENAC/SENAC - Projeto Integrador/BomGosto/BomGosto.csproj",
+  "expectedPackageFiles": [
+    "/home/rodrigo/.nuget/packages/mysqlconnector/0.69.3/mysqlconnector.0.69.3.nupkg.sha512",
+    "/home/rodrigo/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

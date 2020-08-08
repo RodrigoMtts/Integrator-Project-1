@@ -1,0 +1,27 @@
+@model Carrinho;
+<partial name="_menuAdminPartial">
+<div class="tabela">                    
+    <table id="customers">
+        <tr>
+            <th>Nome</th>
+            <th>saborPrincipal</th>
+            <th>descricao</th>
+            <th>preco</th>
+            <th>Remover</th>
+        </tr>
+        @foreach (var item in Model.produtos)
+        {
+        <tr>
+            <td>@item.nome</td>
+            <td>@item.saborPrincipal</td>
+            <td>@item.descricao</td>
+            <td>R$@item.preco</td>
+            <td><a href="/Carrinho/Retirar/@Model.produtos.IndexOf(item)">Remover</a></td>
+        </tr>
+        }
+    </table>
+</div>
+<div class="flex-meus-dados sp-bt">
+    <button class="bt-finalizar"><a asp-action="FinalizarCompra" asp-controller="Pedido">Finalizar Compra</a></button>
+    <div class="valor-total">Valor total: R$@Model.ValorTotal()</div>
+</div>
